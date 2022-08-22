@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="/images/typescript.svg" type="image/svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript Tests</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/new/css/all.min.css">
+  <style>
+    * {
+      font-family: 'Rubik', sans-serif;
+    }
+    .todo-app {
+      display: flex;
+      background-color: #dcdde1;
+      margin: 50px auto 0;
+      padding: 35px 35px 50px;
+      border-radius: 5px;
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    .todo-app h1 {
+      text-align: center;
+      margin: 0 0 20px;
+      width: 100%;
+    }
+
+    .todo-app input {
+      flex: 0 0 75%;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      font-size: 18px;
+    }
+
+    .todo-app button {
+      flex: 0 0 25%;
+      border: 1px solid #ccc;
+      background-color: #f6f6f6;
+      border-radius: 0 5px 5px 0;
+      outline: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .todo-app button:hover {
+      background-color: #dddddd;
+    }
+
+    .todo-container {
+      flex: 0 0 100%;
+    }
+
+    .todo-container .todo {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0,0,0,0.1);
+      padding: 0 15px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    .todo-container .todo p {
+      flex: 0 0 80%;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    .todo-container .todo p.completed {
+      text-decoration: line-through;
+      color: #777;
+    }
+
+    .todo-container .todo i {
+      text-align: center;
+      width: 10%;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-style: normal;
+      font-size: 14px;
+    }
+
+    .todo-container .todo i:hover {
+      color: #777;
+    }
+
+    #errMessage {
+      background-color: rgba(255,0,0,0.2);
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin: 15px 0 5px;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+  </style>
+  <script src="dist/script.js" defer></script>
+  <script src="dist/todo.js" defer></script>
+</head>
+<body>
+  <input type="file" id="fileUpload" aria-label="todo">
+  <input type="text" placeholder="Type your todo..." id="todo-input" aria-label="todo">
+  <button id="todo-btn">Add</button>
+  <div id="todos"></div>
+
+  <div class="todo-app">
+    <h1><i class="fa-duotone fa-truck-fast"></i> TypeScript Todo App</h1>
+    <input type="text" id="add-todo" placeholder="Type your next task..." aria-label="todo" />
+    <button>Add</button>
+    <div id="errMessage"></div>
+    <div class="todo-container"></div>
+  </div>
+
+</body>
+</html>
